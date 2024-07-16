@@ -52,7 +52,7 @@ export const register = async (req, res) => {
   //   =================================================================send a link to activate account================================
   const mailoptions = {
     from: "vatsan.designs@gmail.com",
-    to: "info.creatorstock@gmail.com",
+    to: email,
     subject: "Account Activation Link",
     html: `<a href="https://identity-ecommerce-frontend.vercel.app/activate_account/${randomString}/${email}">Activate Account</a>`,
   };
