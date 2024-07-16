@@ -54,7 +54,7 @@ export const register = async (req, res) => {
     from: "vatsan.designs@gmail.com",
     to: "info.creatorstock@gmail.com",
     subject: "Account Activation Link",
-    html: `<a href="http://localhost:5173/activate_account/${randomString}/${email}">Activate Account</a>`,
+    html: `<a href="https://identity-ecommerce-frontend.vercel.app/activate_account/${randomString}/${email}">Activate Account</a>`,
   };
   transporter.sendMail(mailoptions);
 
@@ -167,7 +167,7 @@ export const forgot_password = async (req, res) => {
       from: "vatsan.designs@gmail.com",
       to: email,
       subject: "Link to Reset Password",
-      html: `<a href="http://localhost:5173/reset_password/${email}/${randomString}"> Click Here to reset your Password</a>`,
+      html: `<a href="https://identity-ecommerce-frontend.vercel.app/reset_password/${email}/${randomString}"> Click Here to reset your Password</a>`,
     };
     transporter.sendMail(mailOptions)
     res.status(200).json({message:"Email Sent", data:true})
